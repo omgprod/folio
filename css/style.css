@@ -13,46 +13,30 @@
 }
 
 @keyframes myAnim {
-0% {
-		animation-timing-function: ease-in;
-		opacity: 0;
-		transform: translateY(-250px);
+	0% {
+    opacity: 0;
+		transform: translate(2000px);
 	}
 
-	38% {
-		animation-timing-function: ease-out;
-		opacity: 1;
-		transform: translateY(0);
+	20% {
+    opacity: 1;
+		transform: translate(-20px, 20px);
 	}
 
-	55% {
-		animation-timing-function: ease-in;
-		transform: translateY(-65px);
+	40% {
+		transform: translate(-20px, -20px);
 	}
 
-	72% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
+	60% {
+		transform: translate(20px, 20px);
 	}
 
-	81% {
-		animation-timing-function: ease-in;
-		transform: translateY(-28px);
-	}
-
-	90% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
-	}
-
-	95% {
-		animation-timing-function: ease-in;
-		transform: translateY(-8px);
+	80% {
+		transform: translate(20px, -20px);
 	}
 
 	100% {
-		animation-timing-function: ease-out;
-		transform: translateY(0);
+		transform: translate(0);
 	}
 }
 
@@ -81,7 +65,7 @@
 }
 
 .card {
-  animation: myAnim 2s ease 0s 1 normal forwards;
+  animation: myAnim 3s ease 0s 1 normal forwards;
   vertical-align: middle;
 	 max-width: 340px;
 	 margin: auto;
@@ -876,8 +860,7 @@ body .footer .content > div .image {
 
 /**/
 
-.glasses .glass
-{
+.glasses .glass {
     display: block;
     -webkit-animation: fadeInFromNone 2.5s ease-out;
     -moz-animation: fadeInFromNone 2.5s ease-out;
@@ -894,13 +877,13 @@ body .footer .content > div .image {
   1% {
       display: block;
       opacity: 0;
-      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px));
+      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px)) rotate(0deg);
   }
 
   100% {
       display: block;
       opacity: 1;
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0) rotate(var(--rotate));
   }
 }
 
@@ -913,13 +896,13 @@ body .footer .content > div .image {
   1% {
       display: block;
       opacity: 0;
-      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px));
+      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px)) rotate(0deg);
   }
 
   100% {
       display: block;
       opacity: 1;
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0) rotate(var(--rotate));
   }
 }
 
@@ -932,13 +915,13 @@ body .footer .content > div .image {
   1% {
       display: block;
       opacity: 0;
-      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px));
+      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px)) rotate(0deg);
   }
 
   100% {
       display: block;
       opacity: 1;
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0) rotate(var(--rotate));
   }
 }
 
@@ -951,12 +934,12 @@ body .footer .content > div .image {
   1% {
       display: block;
       opacity: 0;
-      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px));
+      transform: translateX(var(--position, -500px)) translateY(var(--position, -500px)) rotate(0deg);
   }
 
   100% {
       display: block;
       opacity: 1;
-      transform: translateX(0) translateY(0) rotate(0deg);
+      transform: translateX(0) translateY(0) rotate(var(--rotate));
   }
 }

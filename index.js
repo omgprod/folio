@@ -139,7 +139,8 @@ const remap = (value, oldMax, newMax) => {
   console.log(width, height);
   console.log(window.screen.width)
   let divs = document.getElementById("glasses")
-  for(let i = 0; i < 10; i++){
+  console.log(parseInt(width/100 + 6))
+  for(let i = 0; i < parseInt(width/100 + 6); i++){
     let num = 5+Math.random()*1100;
     let test = (i % 2 == 0) ? "-" : ""; 
     let bubble = document.createElement("div")
@@ -151,10 +152,11 @@ const remap = (value, oldMax, newMax) => {
     --position:${test+num}px;
     --time:${2+Math.random()*2}s;
     --delay:${-1*(2+Math.random()*2)}s;
+    --rotate:${-1*(2+Math.random()*360)}deg;
     position:absolute;
     transform: rotate(${Math.random()*360}deg);
-    top: ${Math.floor(Math.random() * height)}px;
-    left: ${Math.floor(Math.random() * width)}px;`
+    top: ${Math.floor(Math.random() * height / 1.4)}px;
+    left: ${Math.floor(Math.random() * width / 1.4)}px;`
     divs.appendChild(bubble)
   }
 
