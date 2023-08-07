@@ -135,9 +135,6 @@ const remap = (value, oldMax, newMax) => {
   document.body.clientWidth;
   const height = window.innerHeight|| document.documentElement.clientHeight|| 
   document.body.clientHeight;
-
-  console.log(width, height);
-  console.log(window.screen.width)
   let divs = document.getElementById("glasses")
   console.log(parseInt(width/100 + 6))
   for(let i = 0; i < parseInt(width/100 + 6); i++){

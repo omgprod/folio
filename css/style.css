@@ -862,10 +862,10 @@ body .footer .content > div .image {
 
 .glasses .glass {
     display: block;
-    -webkit-animation: fadeInFromNone 2.5s ease-out;
-    -moz-animation: fadeInFromNone 2.5s ease-out;
-    -o-animation: fadeInFromNone 2.5s ease-out;
-    animation: fadeInFromNone 1s ease 0s 1 normal forwards;
+    -webkit-animation: 2.5s ease 0s 1 normal forwards;
+    -moz-animation: fadeInFromNone 2.5s ease 0s 1 normal forwards;
+    -o-animation: fadeInFromNone 2.5s ease 0s 1 normal forwards;
+    animation: fadeInFromNone 2.5s ease 0s 1 normal forwards;
 }
 
 @keyframes fadeInFromNone {
