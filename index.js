@@ -34,45 +34,6 @@ const remap = (value, oldMax, newMax) => {
 	return Math.min(Math.max(newValue, -newMax), newMax);
 };
 
-document.addEventListener("DOMContentLoaded", () => {
-	const cards = document.querySelectorAll(".card");
-  console.log(cards)
-	cards.forEach((e) => {		
-    console.log(e)
-		e.addEventListener("mousemove", (event) => {
-			const rect = e.getBoundingClientRect();
-			const centerX = (rect.left + rect.right) / 2;
-			const centerY = (rect.top + rect.bottom) / 2;
-			const posX = event.pageX - centerX;
-			const posY = event.pageY - centerY;
-			const x = remap(posX, rect.width / 2, angle);
-			const y = remap(posY, rect.height / 2, angle);
-			e.dataset.rotateX = x;
-			e.dataset.rotateY = -y;
-		});
-		
-		e.addEventListener("mouseout", (event) => {
-			e.dataset.rotateX = 0;
-			e.dataset.rotateY = 0;
-		});
-	});
-	
-	const update = () => {
-		cards.forEach((e) => {
-			let currentX = parseFloat(e.style.getPropertyValue('--rotateY').slice(0, -1));
-			let currentY = parseFloat(e.style.getPropertyValue('--rotateX').slice(0, -1));
-			if (isNaN(currentX)) currentX = 0;
-			if (isNaN(currentY)) currentY = 0;
-			const x = lerp(currentX, e.dataset.rotateX, 0.05);
-			const y = lerp(currentY, e.dataset.rotateY, 0.05);
-			e.style.setProperty("--rotateY", x + "deg");
-			e.style.setProperty("--rotateX", y + "deg");
-		})
-	}
-	setInterval (update,1000/60)
-});
-
-
 // var x;
 // var $cards = $(".card");
 // var $style = $(".hover");
@@ -162,4 +123,38 @@ document.addEventListener("DOMContentLoaded", () => {
       btn.style.setProperty('--opacity', `${0.25}`);
     });
   })
+
+
+  let test = document.getElementsByClassName("fa-brands")  
+  Array.from(test).forEach(element => {
+    element.addEventListener("mouseover", (event) => element.classList.add("fa-beat"));
+    element.addEventListener("mouseleave", (event) => element.classList.remove("fa-beat"));
+
+  });
+  const width  = window.innerWidth || document.documentElement.clientWidth || 
+  document.body.clientWidth;
+  const height = window.innerHeight|| document.documentElement.clientHeight|| 
+  document.body.clientHeight;
+
+  console.log(width, height);
+  console.log(window.screen.width)
+  let divs = document.getElementById("glasses")
+  for(let i = 0; i < 10; i++){
+    let num = 5+Math.random()*1100;
+    let test = (i % 2 == 0) ? "-" : ""; 
+    let bubble = document.createElement("div")
+    bubble.classList.add("glass")
+    bubble.style = 
+    `--height:${4+Math.random()*20}rem;
+    --width:${4+Math.random()*20}rem;
+    --distance:${6+Math.random()*4}rem;
+    --position:${test+num}px;
+    --time:${2+Math.random()*2}s;
+    --delay:${-1*(2+Math.random()*2)}s;
+    position:absolute;
+    transform: rotate(${Math.random()*360}deg);
+    top: ${Math.floor(Math.random() * height)}px;
+    left: ${Math.floor(Math.random() * width)}px;`
+    divs.appendChild(bubble)
+  }
 

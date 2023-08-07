@@ -15,45 +15,14 @@
 <body>
 
 
-<!-- <ul class="Words">
-  <li class="Words-line">
-    <p>&nbsp;</p>
-    <p>CSS Only</p>
-  </li>
-  <li class="Words-line">
-    <p>CSS Only</p>
-    <p>Perspective</p>
-  </li>
-  <li class="Words-line">
-    <p>Perspective</p>
-    <p>Text Effect</p>
-  </li>
-  <li class="Words-line">
-    <p>Text Effect</p>
-    <p>by</p>
-  </li>
-  <li class="Words-line">
-    <p>by</p>
-    <p>James</p>
-  </li>
-  <li class="Words-line">
-    <p>James</p>
-    <p>Bosworth</p>
-  </li>
-  <li class="Words-line">
-    <p>Bosworth</p>
-    <p>&nbsp;</p>
-  </li>
-</ul> -->
+
   <div>
     <div style="display: flex; flex-direction: column;">
       <div class="card-fullname glitch" data-text="BABA" style="margin-bottom: 50px">BABA</div>
       <div class="card-fullname glitch" style="--width: 175px; margin-top: 30px" data-text="HAGG">HAGG</div>
     </div>
     
-    <div class="glasses" id="glasses">
-
-    </div>
+    <div class="glasses" id="glasses"></div>
     <div class="card animated" style="margin-top: 10%" data-state="#about">
       <div class="card-header">
         <div class="card-cover" style="background-image: url('https://images.unsplash.com/photo-1549068106-b024baf5062d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=934&q=80')"></div>
@@ -70,10 +39,15 @@
           </div>
           <div class="card-social">
             <a href="#">
-              <i class="fa-brands fa-github fa-2xl"></i>
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" />
+              </svg>
             </a>
-            <a href="#"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23.994 24v-.001H24v-8.802c0-4.306-.927-7.623-5.961-7.623-2.42 0-4.044 1.328-4.707 2.587h-.07V7.976H8.489v16.023h4.97v-7.934c0-2.089.396-4.109 2.983-4.109 2.549 0 2.587 2.384 2.587 4.243V24zM.396 7.977h4.976V24H.396zM2.882 0C1.291 0 0 1.291 0 2.882s1.291 2.909 2.882 2.909 2.882-1.318 2.882-2.909A2.884 2.884 0 002.882 0z" /></svg></a>
+            <a href="#">
+              <svg xmlns="http://www.w3.org/2000/svg" height="3em" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
+                <path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/>
+              </svg>
+            </a>  
           </div>
         </div>
         <div class="card-section" id="experience">
@@ -162,56 +136,8 @@
           <button data-section="#contact">CONTACT</button>
         </div>
       </div>
-    </div>    
-  <!-- </div>
-<div class="footer glass">
-    <div class="bubbles" id="bubbles"></div>
-</div> -->
-<script type="text/javascript">
-  let test = document.getElementsByClassName("fa-brands")  
-  Array.from(test).forEach(element => {
-    element.addEventListener("mouseover", (event) => element.classList.add("fa-beat"));
-    element.addEventListener("mouseleave", (event) => element.classList.remove("fa-beat"));
-
-  });
-  const width  = window.innerWidth || document.documentElement.clientWidth || 
-  document.body.clientWidth;
-  const height = window.innerHeight|| document.documentElement.clientHeight|| 
-  document.body.clientHeight;
-
-  console.log(width, height);
-  console.log(window.screen.width)
-  let divs = document.getElementById("glasses")
-  for(let i = 0; i < 10; i++){
-    let bubble = document.createElement("div")
-    bubble.classList.add("glass")
-    bubble.style = 
-    `--height:${4+Math.random()*20}rem;
-    --width:${4+Math.random()*20}rem;
-    --distance:${6+Math.random()*4}rem;
-    --position:${-5+Math.random()*110}%;
-    --time:${2+Math.random()*2}s;
-    --delay:${-1*(2+Math.random()*2)}s;
-    position:absolute;
-    transform: rotate(${Math.random()*360}deg);
-    top: ${Math.floor(Math.random() * height)}px;
-    left: ${Math.floor(Math.random() * width)}px;`
-    divs.appendChild(bubble)
-  }
-  // let div = document.getElementById("bubbles")
-  // for(let i = 0; i < 120; i++){
-  //   const bubble = document.createElement("div")
-  //   bubble.classList.add("bubble")
-  //   bubble.style = 
-  //   `--size:${2+Math.random()*4}rem;
-  //   --width:${2+Math.random()*4}rem;
-  //   --distance:${6+Math.random()*4}rem;
-  //   --position:${-5+Math.random()*110}%;
-  //   --time:${2+Math.random()*2}s;
-  //   --delay:${-1*(2+Math.random()*2)}s;`
-  //   div.appendChild(bubble)
-  // }
-</script>
+    </div>
+  </div>  
 <script type="text/javascript" src="index.js"></script>
 </body>
 </html>
