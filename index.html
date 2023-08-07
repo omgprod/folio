@@ -45,9 +45,12 @@
     <p>&nbsp;</p>
   </li>
 </ul> -->
-
-  <h1 class="card-fullname glitch" data-text="BRIAN HAGGERTY">BRIAN HAGGERTY</h1>
   <div>
+    <div style="display: flex; flex-direction: column;">
+      <div class="card-fullname glitch" data-text="BABA" style="margin-bottom: 50px">BABA</div>
+      <div class="card-fullname glitch" style="--width: 175px; margin-top: 30px" data-text="HAGG">HAGG</div>
+    </div>
+    
     <div class="glasses" id="glasses">
 
     </div>
@@ -171,6 +174,13 @@
     element.addEventListener("mouseleave", (event) => element.classList.remove("fa-beat"));
 
   });
+  const width  = window.innerWidth || document.documentElement.clientWidth || 
+  document.body.clientWidth;
+  const height = window.innerHeight|| document.documentElement.clientHeight|| 
+  document.body.clientHeight;
+
+  console.log(width, height);
+  console.log(window.screen.width)
   let divs = document.getElementById("glasses")
   for(let i = 0; i < 10; i++){
     let bubble = document.createElement("div")
@@ -184,8 +194,8 @@
     --delay:${-1*(2+Math.random()*2)}s;
     position:absolute;
     transform: rotate(${Math.random()*360}deg);
-    top: ${Math.floor(Math.random() * 1000)}px;
-    left: ${Math.floor(Math.random() * 1000)}px;`
+    top: ${Math.floor(Math.random() * height)}px;
+    left: ${Math.floor(Math.random() * width)}px;`
     divs.appendChild(bubble)
   }
   // let div = document.getElementById("bubbles")

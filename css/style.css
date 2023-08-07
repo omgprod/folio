@@ -21,12 +21,6 @@
    background: linear-gradient(-45deg, #52b5ee, #3c42e7, #23a6d5, #234fd5);
    background-size: 400% 400%;
    animation: gradient 15s ease infinite;
-   /*background-image: url(https://images.unsplash.com/photo-1566738780863-f9608f88f3a9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2378&q=80);
-	 background-repeat: no-repeat;
-	 background-size: cover;
-	 background-position: center;
-	 background-attachment: fixed;
-	 */
    min-height: 100vh;
 	 padding: 20px;
    display: grid;
@@ -43,11 +37,12 @@
 }
 
 .card {
+  vertical-align: middle;
 	 max-width: 340px;
 	 margin: auto;
 	 overflow-y: hidden;
 	 position: relative;
-	 z-index: 1;
+	 z-index: 999;
 	 overflow-x: hidden;
 	 background-color: rgba(255, 255, 255, 0.7);
 	 display: flex;
@@ -93,9 +88,12 @@
  .card.is-active .card-fullname {
 	 bottom: 18px;
 	 font-size: 19px;
+   color: rgb(239, 237, 237);
 }
  .card.is-active .card-jobtitle {
 	 bottom: 16px;
+   left: 170px;
+   color: whitesmoke;
 	 letter-spacing: 1px;
 	 font-size: 10px;
 }
@@ -417,7 +415,8 @@
   color: #081f37;
   opacity: 0.33;
   font-size:60px;
-  width:525px;
+  width:155px;
+  width: var(--width,155px);
   margin:0 auto;
 }
 @keyframes noise-anim {
@@ -825,3 +824,82 @@ body .footer .content > div .image {
   -webkit-backdrop-filter: blur(5px);
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
+
+/**/
+
+.glasses .glass
+{
+    display: block;
+    -webkit-animation: fadeInFromNone 2.5s ease-out;
+    -moz-animation: fadeInFromNone 2.5s ease-out;
+    -o-animation: fadeInFromNone 2.5s ease-out;
+    animation: fadeInFromNone 2.5s ease-out;
+}
+
+@-webkit-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@-o-keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInFromNone {
+    0% {
+        display: none;
+        opacity: 0;
+    }
+
+    1% {
+        display: block;
+        opacity: 0;
+    }
+
+    100% {
+        display: block;
+        opacity: 1;
+    }
+  }
